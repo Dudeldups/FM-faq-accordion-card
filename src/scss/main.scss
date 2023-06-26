@@ -1,0 +1,55 @@
+@use "resets";
+@use "colors";
+@use "gradients";
+@use "mixins" as *;
+
+body {
+  font: 0.75rem "Kumbh Sans", sans-serif;
+  background: linear-gradient(gradients.$violet);
+  padding: 2rem 1.5rem;
+}
+
+.card {
+  margin-top: 7rem;
+  background: white;
+  border-radius: 20px;
+
+  &__image-wrapper {
+    position: relative;
+    background: url("../assets/bg-pattern-mobile.svg") top center no-repeat;
+    height: 8rem;
+
+    &__main-img {
+      position: absolute;
+      width: 15rem;
+      left: 0;
+      right: 0;
+      margin-inline: auto;
+      transform: translateY(-60%);
+    }
+  }
+
+  &__text {
+    &__title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: colors.$dark-blue;
+      text-align: center;
+    }
+
+    &__faqs {
+      &__question {
+        list-style: none;
+      }
+
+      &__answer {
+      }
+
+      & hr {
+        border: none;
+        height: 1px;
+        background-color: colors.$grey;
+      }
+    }
+  }
+}
