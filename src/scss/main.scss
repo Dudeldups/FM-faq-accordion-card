@@ -17,7 +17,7 @@ body {
   &__image-wrapper {
     position: relative;
     background: url("../assets/bg-pattern-mobile.svg") top center no-repeat;
-    height: 8rem;
+    height: 7rem;
 
     &__main-img {
       position: absolute;
@@ -30,6 +30,8 @@ body {
   }
 
   &__text {
+    padding: 1.5rem;
+
     &__title {
       font-size: 2rem;
       font-weight: 700;
@@ -38,14 +40,41 @@ body {
     }
 
     &__faqs {
+      margin-top: 2rem;
+
       &__question {
+        margin-bottom: 0.5rem;
+        font-size: 0.8rem;
+        color: colors.$dark-blue;
         list-style: none;
+
+        [open] & {
+          font-weight: 700;
+        }
+
+        &:hover {
+          color: colors.$red;
+        }
       }
 
       &__answer {
+        position: relative;
+
+        &::after {
+          content: url("../assets/icon-arrow-down.svg");
+          position: absolute;
+          right: 0;
+          top: 0;
+
+          details[open] & {
+            right: 20;
+            transform: rotate(180deg);
+          }
+        }
       }
 
       & hr {
+        margin-block: 1rem;
         border: none;
         height: 1px;
         background-color: colors.$grey;
