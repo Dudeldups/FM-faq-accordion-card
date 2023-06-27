@@ -72,13 +72,30 @@ body {
 
 .card {
   margin-top: 7rem;
+  margin-inline: auto;
+  max-width: 28.125rem;
   background: white;
   border-radius: 20px;
+}
+@media only screen and (min-width: 65em) {
+  .card {
+    position: relative;
+    max-width: 57.6rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
 }
 .card__image-wrapper {
   position: relative;
   background: url("../assets/bg-pattern-mobile.svg") top center no-repeat;
   height: 7rem;
+}
+@media only screen and (min-width: 65em) {
+  .card__image-wrapper {
+    background: url("../assets/bg-pattern-desktop.svg") -36.4rem -18.4rem no-repeat;
+    height: auto;
+    overflow: hidden;
+  }
 }
 .card__image-wrapper__main-img {
   position: absolute;
@@ -88,8 +105,34 @@ body {
   margin-inline: auto;
   transform: translateY(-60%);
 }
+@media only screen and (min-width: 65em) {
+  .card__image-wrapper__main-img {
+    position: relative;
+    width: auto;
+    right: unset;
+    transform: unset;
+    left: -17%;
+    top: 17%;
+    margin-block: auto;
+  }
+}
+.card__image-wrapper__box-img {
+  position: absolute;
+  z-index: 1;
+  max-height: 4rem;
+  top: 0;
+  bottom: 0;
+  left: -10%;
+  margin-block: auto;
+}
 .card__text {
   padding: 1.5rem;
+}
+@media only screen and (min-width: 65em) {
+  .card__text {
+    padding-right: 6.25rem;
+    margin-block: 2.2rem;
+  }
 }
 .card__text__title {
   font-size: 2rem;
@@ -97,8 +140,13 @@ body {
   color: hsl(238, 29%, 16%);
   text-align: center;
 }
+@media only screen and (min-width: 65em) {
+  .card__text__title {
+    text-align: left;
+  }
+}
 .card__text__faqs {
-  margin-top: 2rem;
+  margin-top: 2.5rem;
 }
 .card__text__faqs__question {
   position: relative;
@@ -138,4 +186,7 @@ body {
   border: none;
   height: 1px;
   background-color: hsl(240, 5%, 91%);
+}
+.card__text__faqs hr:last-child {
+  margin-bottom: 1.5rem;
 }/*# sourceMappingURL=main.css.map */

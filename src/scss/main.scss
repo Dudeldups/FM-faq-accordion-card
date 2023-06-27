@@ -11,13 +11,29 @@ body {
 
 .card {
   margin-top: 7rem;
+  margin-inline: auto;
+  max-width: 28.125rem;
   background: white;
   border-radius: 20px;
+
+  @include mq-desktop {
+    position: relative;
+    max-width: 57.6rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
 
   &__image-wrapper {
     position: relative;
     background: url("../assets/bg-pattern-mobile.svg") top center no-repeat;
     height: 7rem;
+
+    @include mq-desktop {
+      background: url("../assets/bg-pattern-desktop.svg") -36.4rem -18.4rem
+        no-repeat;
+      height: auto;
+      overflow: hidden;
+    }
 
     &__main-img {
       position: absolute;
@@ -26,21 +42,50 @@ body {
       right: 0;
       margin-inline: auto;
       transform: translateY(-60%);
+
+      @include mq-desktop {
+        position: relative;
+        width: auto;
+        right: unset;
+        transform: unset;
+        left: -17%;
+        top: 17%;
+        margin-block: auto;
+      }
+    }
+
+    &__box-img {
+      position: absolute;
+      z-index: 1;
+      max-height: 4rem;
+      top: 0;
+      bottom: 0;
+      left: -10%;
+      margin-block: auto;
     }
   }
 
   &__text {
     padding: 1.5rem;
 
+    @include mq-desktop {
+      padding-right: 6.25rem;
+      margin-block: 2.2rem;
+    }
+
     &__title {
       font-size: 2rem;
       font-weight: 700;
       color: colors.$dark-blue;
       text-align: center;
+
+      @include mq-desktop {
+        text-align: left;
+      }
     }
 
     &__faqs {
-      margin-top: 2rem;
+      margin-top: 2.5rem;
 
       &__question {
         position: relative;
@@ -86,6 +131,10 @@ body {
         border: none;
         height: 1px;
         background-color: colors.$grey;
+
+        &:last-child {
+          margin-bottom: 1.5rem;
+        }
       }
     }
   }
