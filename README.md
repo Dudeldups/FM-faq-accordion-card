@@ -42,7 +42,7 @@ Users should be able to:
 
 ### Links
 
-- Solution on Frontend Mentor: [Add solution URL here](https://your-solution-url.com)
+- Solution on Frontend Mentor: [https://www.frontendmentor.io/solutions/scsshtml-faq-accordion-card-zQlnnbf8CU](https://www.frontendmentor.io/solutions/scsshtml-faq-accordion-card-zQlnnbf8CU)
 - Live Site URL: [https://dudeldups.github.io/FM-faq-accordion-card/](https://dudeldups.github.io/FM-faq-accordion-card/)
 
 ## My process
