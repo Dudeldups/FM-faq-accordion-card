@@ -82,6 +82,9 @@ body {
   background: white;
   border-radius: 20px;
 }
+.card:hover .card__image-wrapper__box-img {
+  transform: translateX(-10%);
+}
 @media only screen and (min-width: 65em) {
   .card {
     position: relative;
@@ -130,6 +133,7 @@ body {
   bottom: 0;
   left: -10%;
   margin-block: auto;
+  transition: 300ms ease-in-out;
 }
 .card__text {
   padding: 1.5rem;
